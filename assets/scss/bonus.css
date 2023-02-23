@@ -37,6 +37,7 @@ hr {
 .bonus__item_icons.up {
     gap: 80px;
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 @media (max-width: 1250px) {
