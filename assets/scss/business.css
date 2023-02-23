@@ -1,0 +1,358 @@
+.business {
+    max-width: 100%;
+}
+
+.business h3 {
+    font-family: "Proxima Nova Condensed", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 100%;
+    color: #444444;
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+@media (max-width: 1250px) {
+    .business h3 {
+        font-size: calc(26px + 30 * (100vw - 320px) / 930);
+        margin-bottom: calc(15px + 5 * (100vw - 320px) / 930);
+    }
+}
+
+.business__mission {
+    text-align: center;
+    position: relative;
+    background: #A30C33;
+    padding: 140px 70px;
+    margin-top: 105px;
+    margin-bottom: 100px;
+}
+
+@media (max-width: 1250px) {
+    .business__mission {
+        margin-bottom: calc(50px + 50 * (100vw - 320px) / 930);
+        margin-top: calc(70px + 35 * (100vw - 320px) / 930);
+        padding: calc(30px + 110 * (100vw - 320px) / 930) calc(10px + 60 * (100vw - 320px) / 930);
+    }
+}
+
+.business__mission h2 {
+    z-index: 5;
+    margin-bottom: 40px;
+    font-family: "Proxima Nova Condensed", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 100%;
+    color: #FFFFFF;
+}
+
+@media (max-width: 1250px) {
+    .business__mission h2 {
+        font-size: calc(28px + 28 * (100vw - 320px) / 930);
+        margin-bottom: calc(10px + 30 * (100vw - 320px) / 930);
+    }
+}
+
+.business__mission p {
+    z-index: 5;
+    font-family: "Proxima Nova Condensed", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #FFFFFF;
+}
+
+@media (max-width: 1250px) {
+    .business__mission p {
+        font-size: calc(16px + 16 * (100vw - 320px) / 930);
+    }
+}
+
+.business_mission_item {
+    position: absolute;
+}
+
+.business_mission_item.left {
+    width: 28%;
+    left: -50px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+@media (max-width: 1250px) {
+    .business_mission_item.left {
+        left: calc(-20px + 16 * (100vw - 320px) / 930);
+    }
+}
+
+@media (max-width: 640px) {
+    .business_mission_item.left {
+        width: 30%;
+    }
+}
+
+@media (max-width: 480px) {
+    .business_mission_item.left {
+        width: 33%;
+    }
+}
+
+@media (max-width: 320px) {
+    .business_mission_item.left {
+        width: 38%;
+    }
+}
+
+.business_mission_item.right {
+    width: 28%;
+    right: -50px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+@media (max-width: 1250px) {
+    .business_mission_item.right {
+        right: calc(-20px + -30 * (100vw - 320px) / 930);
+    }
+}
+
+@media (max-width: 640px) {
+    .business_mission_item.right {
+        width: 30%;
+    }
+}
+
+@media (max-width: 480px) {
+    .business_mission_item.right {
+        width: 33%;
+    }
+}
+
+@media (max-width: 320px) {
+    .business_mission_item.right {
+        width: 38%;
+    }
+}
+
+.business_cards {
+    display: grid;
+    gap: 20px;
+    padding: 0 7px;
+    grid-template-columns: repeat(2, minmax(280px, 615px));
+    grid-auto-columns: minmax(280px, 615px);
+}
+
+@media (max-width: 799.79px) {
+    .business_cards {
+        grid-template-columns: minmax(280px, 615px);
+        grid-auto-columns: minmax(280px, 615px);
+        justify-content: center;
+    }
+}
+
+@media (max-width: 479.79px) {
+    .business_cards {
+        margin-left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+@media (max-width: 320px) {
+    .business_cards {
+        gap: 10px;
+    }
+}
+
+.business_cards_item {
+    position: relative;
+    overflow: hidden;
+    height: calc(100% - 3px);
+}
+
+.business_cards_item img {
+    width: 100%;
+}
+
+@media (max-width: 479.79px) {
+    .business_cards_item img {
+        height: 240px;
+        width: auto;
+        margin-left: -140px;
+    }
+}
+
+@media (max-width: 479.79px) {
+    .business_cards_item {
+        height: 240px;
+        width: 280px;
+    }
+}
+
+@media (max-width: 320px) {
+    .business_cards_item {
+        height: 60px;
+    }
+
+    .business_cards_item:hover {
+        transition: 0.5s;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.business_cards_item-text {
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: rgba(45, 54, 83, 0.6);
+    bottom: calc(-100% + 80px);
+    height: 100%;
+    width: 100%;
+    padding: 20px 115px 20px 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+@media (max-width: 1154px) {
+    .business_cards_item-text {
+        padding: 20px 50px 20px 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .business_cards_item-text {
+        padding: 20px 20px 20px 20px;
+        bottom: calc(-100% + 60px);
+        gap: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .business_cards_item-text {
+        padding: 10px 30px 20px 20px;
+    }
+}
+
+@media (max-width: 799.79px) {
+    .business_cards_item-text {
+        padding: 30px 30px 20px 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .business_cards_item-text {
+        padding: 10px 10px 20px 10px;
+    }
+}
+
+@media (max-width: 479.79px) {
+    .business_cards_item-text:hover::before {
+        position: absolute;
+        right: 16.5px;
+        content: url(../images/arrow_white_up.svg);
+        animation: 1s linear rotate;
+    }
+
+    .business_cards_item-text:not(:hover)::before {
+        position: absolute;
+        right: 16.5px;
+        content: url(../images/arrow_white.svg);
+    }
+}
+
+.business_cards_item-text:hover {
+    bottom: 0;
+    transition: 0.5s;
+}
+
+.business_cards_item-text p {
+    font-family: "Proxima Nova Condensed", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 140%;
+    color: #FFFFFF;
+}
+
+@media (max-width: 1024px) {
+    .business_cards_item-text p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 799.79px) {
+    .business_cards_item-text p {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 640px) {
+    .business_cards_item-text p {
+        font-size: 15px;
+    }
+}
+
+.business_cards_item-text-title {
+    height: 80px;
+}
+
+@media (max-width: 1024px) {
+    .business_cards_item-text-title {
+        height: 40px;
+    }
+}
+
+@media (max-width: 640px) {
+    .business_cards_item-text-title {
+        height: 50px;
+    }
+}
+
+.business_cards_item-text-title h3 {
+    text-align: start;
+    font-family: "Proxima Nova Condensed", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 110%;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+    .business_cards_item-text-title h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 799.79px) {
+    .business_cards_item-text-title h3 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    .business_cards_item-text-title h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 479.79px) {
+    .business_cards_item-text-title h3 {
+        font-size: 16px;
+        padding-right: 15px;
+    }
+}

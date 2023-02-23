@@ -1,0 +1,589 @@
+.map {
+    width: 100%;
+    position: relative;
+    overflow-y: hidden;
+}
+
+@media (max-width: 1249.79px) {
+    .map {
+        overflow-x: scroll;
+    }
+}
+
+.map ul {
+    display: flex;
+}
+
+.map ul li {
+    list-style-type: none;
+    margin-right: 30px;
+    font-family: "Proxima Nova Condensed", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    position: relative;
+    padding: 30px 0;
+    cursor: pointer;
+    border-bottom: 3px solid white;
+    white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+    .map ul li {
+        margin-right: 20px;
+    }
+}
+
+.map ul li:last-child {
+    margin-right: 0;
+}
+
+.map__nav {
+    display: flex;
+    padding: 0 70px;
+    margin: 0 auto 90px;
+    background: #FFFFFF;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 1024px) {
+    .map__nav {
+        padding: 0 5px;
+    }
+}
+
+.map__nav_wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media (max-width: 1154px) {
+    .map__nav_wrapper {
+        flex-wrap: wrap;
+    }
+}
+
+.map__nav_wrapper_right {
+    width: 100%;
+}
+
+.map__nav_wrapper_left {
+    position: relative;
+    width: 100%;
+}
+
+.map__nav_wrapper_left h3 {
+    cursor: pointer;
+    padding: 28px 0;
+    display: inline-block;
+}
+
+@media (max-width: 1154px) {
+    .map__nav_wrapper_left h3 {
+        padding: 10px 0;
+    }
+}
+
+.map__nav_wrapper_left img {
+    cursor: pointer;
+    position: absolute;
+    left: 140px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.menu_shadow {
+    opacity: 0.1;
+    animation: 0.5s linear hide;
+}
+
+.menu_shadow_remove {
+    opacity: 3;
+    animation: 0.5s linear remove_shadow;
+}
+
+.map__earth {
+    width: 1220px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+@media (max-width: 1154px) {
+    .map__earth {
+        transform: scale(0.9);
+        width: 1070px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 800px) {
+    .map__earth {
+        transform: scale(0.72);
+        width: 800px;
+        height: 400px;
+    }
+}
+
+.map__earth_landscape {
+    position: absolute;
+    right: 0;
+}
+
+@media (max-width: 1154px) {
+    .map__earth_landscape {
+        right: -80px;
+        top: -100px;
+    }
+}
+
+@media (max-width: 800px) {
+    .map__earth_landscape {
+        right: -250px;
+        top: -180px;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.map__earth_pointers {
+    position: absolute;
+    right: 0;
+}
+
+@media (max-width: 1154px) {
+    .map__earth_pointers {
+        right: -80px;
+        top: -100px;
+    }
+}
+
+@media (max-width: 800px) {
+    .map__earth_pointers {
+        right: -250px;
+        top: -180px;
+    }
+}
+
+.map__earth_item {
+    position: absolute;
+}
+
+.map__earth_item.d-vostok {
+    right: 0;
+    top: 0;
+}
+
+.map__earth_item.siberia {
+    right: 350.7px;
+    top: 50.63px;
+}
+
+.map__earth_item.ural {
+    right: 636.6px;
+    top: 98.5px;
+}
+
+.map__earth_item.nord_west {
+    right: 666.6px;
+    top: 17.3px;
+}
+
+.map__earth_item.volga {
+    right: 885.7px;
+    top: 230px;
+}
+
+.map__earth_item.center {
+    right: 987.7px;
+    top: 174px;
+}
+
+.map__earth_item.south {
+    right: 1024.7px;
+    top: 291px;
+}
+
+.map__earth_pointers-item {
+    display: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #444444;
+    position: absolute;
+    animation: 1s linear show;
+}
+
+.map__earth_pointers-item span {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-family: "Proxima Nova Condensed", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 100%;
+    text-align: right;
+    color: #444444;
+}
+
+.map__earth_pointers-item.vladivostok {
+    right: 210px;
+    top: 574px;
+}
+
+.map__earth_pointers-item.vladivostok span {
+    font-size: 15px;
+}
+
+.map__earth_pointers-item.khabarovsk {
+    right: 197px;
+    top: 498px;
+}
+
+.map__earth_pointers-item.khabarovsk span {
+    top: -20px;
+    font-size: 15px;
+}
+
+.map__earth_pointers-item.irkutsk {
+    right: 490px;
+    top: 491px;
+}
+
+.map__earth_pointers-item.krasnoyarsk {
+    right: 540px;
+    top: 460px;
+}
+
+.map__earth_pointers-item.krasnoyarsk span {
+    font-size: 11px;
+}
+
+.map__earth_pointers-item.tomsk {
+    right: 604px;
+    top: 462px;
+}
+
+.map__earth_pointers-item.tomsk span {
+    top: -20px;
+}
+
+.map__earth_pointers-item.novosibirsk {
+    right: 671px;
+    top: 457px;
+}
+
+.map__earth_pointers-item.novosibirsk span {
+    font-size: 11px;
+}
+
+.map__earth_pointers-item.omsk {
+    right: 723px;
+    top: 473px;
+}
+
+.map__earth_pointers-item.surgut {
+    right: 745px;
+    top: 309px;
+}
+
+.map__earth_pointers-item.surgut span {
+    font-size: 11px;
+}
+
+.map__earth_pointers-item.tumen {
+    right: 770px;
+    top: 363px;
+}
+
+.map__earth_pointers-item.perm {
+    right: 802px;
+    top: 299px;
+}
+
+.map__earth_pointers-item.chelyabinsk {
+    right: 863px;
+    top: 363px;
+}
+
+.map__earth_pointers-item.ekaterinburg {
+    right: 861px;
+    top: 326px;
+}
+
+.map__earth_pointers-item.ekaterinburg span {
+    font-size: 11px;
+}
+
+.map__earth_pointers-item.ijevsk {
+    right: 853px;
+    top: 288px;
+}
+
+.map__earth_pointers-item.ijevsk span {
+    font-size: 11px;
+}
+
+.map__earth_pointers-item.spb {
+    right: 1032px;
+    top: 130px;
+}
+
+.map__earth_pointers-item.spb span {
+    white-space: nowrap;
+    font-size: 12.5px;
+    top: 16px;
+}
+
+.map__earth_pointers-item.yaroslavl {
+    right: 1002px;
+    top: 198px;
+}
+
+.map__earth_pointers-item.yaroslavl span {
+    white-space: nowrap;
+    top: 12px;
+    font-size: 10px;
+}
+
+.map__earth_pointers-item.kaliningrad {
+    right: 1142px;
+    top: 124px;
+}
+
+.map__earth_pointers-item.kaliningrad span {
+    font-size: 11px;
+}
+
+.map__earth_pointers-item.moscow {
+    right: 1040px;
+    top: 223px;
+}
+
+.map__earth_pointers-item.voronej {
+    right: 1086px;
+    top: 245px;
+}
+
+.map__earth_pointers-item.voronej span {
+    font-size: 11px;
+}
+
+.map__earth_pointers-item.belgorod {
+    right: 1091px;
+    top: 276px;
+}
+
+.map__earth_pointers-item.belgorod span {
+    font-size: 11px;
+}
+
+.map__earth_pointers-item.n_novgorod {
+    right: 990px;
+    top: 260px;
+}
+
+.map__earth_pointers-item.n_novgorod span {
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.map__earth_pointers-item.samara {
+    right: 994px;
+    top: 307px;
+}
+
+.map__earth_pointers-item.samara span {
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.map__earth_pointers-item.kazan {
+    right: 932px;
+    top: 299px;
+}
+
+.map__earth_pointers-item.kazan span {
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.map__earth_pointers-item.ufa {
+    right: 930px;
+    top: 335px;
+}
+
+.map__earth_pointers-item.ufa span {
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.map__earth_pointers-item.orenburg {
+    right: 961px;
+    top: 365px;
+}
+
+.map__earth_pointers-item.orenburg span {
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.map__earth_pointers-item.rostov {
+    right: 1100px;
+    top: 319px;
+}
+
+.map__earth_pointers-item.rostov span {
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.map__earth_pointers-item.volgograd {
+    right: 1073px;
+    top: 358px;
+}
+
+.map__earth_pointers-item.volgograd span {
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.map__earth_pointers-item.krasnodar {
+    right: 1131px;
+    top: 379px;
+}
+
+.map__earth_pointers-item.krasnodar span {
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.1;
+    }
+}
+
+@keyframes remove_shadow {
+    0% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.map__list {
+    position: absolute;
+    padding: 15px 68.5px;
+    max-width: 1250px;
+    background: #FFFFFF;
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.06);
+    display: flex;
+    margin-top: 103px;
+    z-index: 30;
+}
+
+@media (max-width: 1024px) {
+    .map__list {
+        padding: 30px 5px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 640px) {
+    .map__list {
+        padding: 0 3px;
+        justify-content: flex-start;
+    }
+}
+
+.map__list ul {
+    padding: 15px 0;
+    margin-right: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.map__list ul:last-child {
+    margin-right: 0;
+}
+
+.map__list ul li {
+    padding: 0;
+    font-family: "Proxima Nova Condensed", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #444444;
+    white-space: nowrap;
+    margin-top: 7.3px;
+    margin-right: 0;
+}
+
+@media (max-width: 640px) {
+    .map__list ul li {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .map__list ul li.active:first-child {
+        display: block;
+    }
+
+    .map__list ul li.active:first-child::after {
+        content: url(../images/map_arrow_little_reverse.svg);
+        position: relative;
+        left: 3px;
+        width: 8px;
+        height: 5px;
+    }
+
+    .map__list ul li:first-child {
+        display: block;
+    }
+
+    .map__list ul li:first-child::after {
+        content: url(../images/map_arrow_little.svg);
+        position: relative;
+        left: 3px;
+        width: 8px;
+        height: 5px;
+    }
+}
+
+.map__list ul li:first-child {
+    font-weight: 700;
+}
+
+.mark {
+    color: #B01736;
+}

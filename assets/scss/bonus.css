@@ -1,0 +1,236 @@
+@charset "UTF-8";
+
+hr {
+    width: calc(100% - 40px);
+    margin: 120px auto 70px;
+}
+
+@media (max-width: 1250px) {
+    hr {
+        margin-bottom: calc(24px + 46 * (100vw - 320px) / 930);
+        margin-top: calc(52px + 68 * (100vw - 320px) / 930);
+    }
+}
+
+.bonus {
+    max-width: 1110px;
+    padding: 80px 110px;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.06);
+    margin: 100px auto;
+}
+
+@media (max-width: 1250px) {
+    .bonus {
+        padding: calc(24px + 86 * (100vw - 320px) / 930) calc(5px + 75 * (100vw - 320px) / 930);
+    }
+}
+
+.bonus__item_icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.bonus__item_icons.up {
+    gap: 80px;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 1250px) {
+    .bonus__item_icons.up {
+        margin-top: calc(40px + 10 * (100vw - 320px) / 930);
+    }
+}
+
+.bonus__item_icons.down {
+    margin-top: 50px;
+    gap: 85px;
+}
+
+@media (max-width: 1250px) {
+    .bonus__item_icons.down {
+        margin-top: calc(25px + 25 * (100vw - 320px) / 930);
+    }
+}
+
+.bonus__item {
+    text-align: center;
+}
+
+.bonus__item span {
+    font-family: "Proxima Nova Condensed", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 120%;
+    text-align: center;
+    color: #B01736;
+}
+
+@media (max-width: 1250px) {
+    .bonus__item span {
+        font-size: calc(21px + 19 * (100vw - 320px) / 930);
+    }
+}
+
+.bonus__item h1 {
+    font-family: "Proxima Nova Condensed", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 100%;
+    text-align: center;
+    color: #444444;
+    white-space: nowrap;
+}
+
+@media (max-width: 1250px) {
+    .bonus__item h1 {
+        font-size: calc(24px + 32 * (100vw - 320px) / 930);
+    }
+}
+
+.bonus__item h2 {
+    font-family: "Proxima Nova Condensed", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 120%;
+    text-align: center;
+    color: #444444;
+}
+
+@media (max-width: 1250px) {
+    .bonus__item h2 {
+        font-size: calc(21px + 19 * (100vw - 320px) / 930);
+    }
+}
+
+.bonus__item_icons-el {
+    position: relative;
+    width: 110px;
+}
+
+.bonus__item_icons-el img {
+    width: 100%;
+}
+
+@media (max-width: 1250px) {
+    .bonus__item_icons-el {
+        width: calc(80px + 30 * (100vw - 320px) / 930);
+    }
+}
+
+.bonus__item_icons-el::after {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Proxima Nova Condensed", sans-serif;
+    font-size: 18px;
+    color: #444444;
+    line-height: 110%;
+    white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+    .bonus__item_icons-el::after {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bonus__item_icons-el::after {
+        font-size: 14px;
+    }
+}
+
+.bonus__item_icons-el::before {
+    position: absolute;
+    bottom: -45px;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Proxima Nova Condensed", sans-serif;
+    font-size: 18px;
+    color: #444444;
+    line-height: 110%;
+}
+
+@media (max-width: 640px) {
+    .bonus__item_icons-el::before {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bonus__item_icons-el::before {
+        font-size: 14px;
+    }
+}
+
+.bonus__item_icons-el.dms::after {
+    content: "Дмс";
+    text-transform: uppercase;
+}
+
+.bonus__item_icons-el.weekend::after {
+    content: "Выходной";
+}
+
+.bonus__item_icons-el.weekend::before {
+    content: "в день рождения";
+}
+
+.bonus__item_icons-el.mobile::after {
+    content: "Корпоративная";
+}
+
+.bonus__item_icons-el.mobile::before {
+    content: "мобильная связь";
+}
+
+.bonus__item_icons-el.sport::after {
+    content: "Корпоративные скидки";
+}
+
+@media (max-width: 800px) {
+    .bonus__item_icons-el.sport::after {
+        content: "Корпоративные";
+    }
+}
+
+.bonus__item_icons-el.sport::before {
+    content: "на спорт";
+}
+
+@media (max-width: 800px) {
+    .bonus__item_icons-el.sport::before {
+        content: "скидки на спорт";
+    }
+}
+
+.bonus__item_icons-el.lti::after {
+    content: "LTI";
+    text-transform: uppercase;
+}
+
+.bonus__item_icons-el.tech::after {
+    content: "Оргтехники";
+}
+
+.bonus__item_icons-el.dms_two::after {
+    content: "ДМС";
+    text-transform: uppercase;
+}
+
+.bonus__item_icons-el.credit::after {
+    content: "Ипотеки";
+}
